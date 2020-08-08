@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+  <a href="https://ui.dev">
+    <img
+      src="https://ui.dev/images/logos/ui.png"
+      alt="UI.dev Logo" width="300" />
+  </a>
+  <br />
+</h1>
 
-## Available Scripts
+<h3 align="center">React Hooks Course Project - <a href="http://github-battle.ui.dev/">Github Battle App</a></h3>
 
-In the project directory, you can run:
+### Info
 
-### `npm start`
+This is the repository for UI.dev's "React Hooks" course project.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+For more information on the course, visit **[ui.dev/react-hooks/](https://ui.dev/react-hooks/)**.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Project
 
-### `npm test`
+This project is a "Github Battle" app. You'll be able to see the most popular repos for a variety of languages as well as battle two Github users to see who has the better profile.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can view the final project at **[github-battle.ui.dev/](http://github-battle.ui.dev/)**
 
-### `npm run build`
+### Branches
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Every (Project) video in the course coincides with a branch. If you want to compare your code with Tyler's or you just want to play around with the code, check out the different branches.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<img align='center' src='https://user-images.githubusercontent.com/2933430/53434937-df9cc300-39b4-11e9-8e8f-5bdd212cac2d.png' width='200' />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Project Preview
 
-### `npm run eject`
+|                                                                                                                                                         Light Mode                                                                                                                                                         |                                                                                                                                                         Dark Mode                                                                                                                                                          |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| ![](https://user-images.githubusercontent.com/2933430/53439193-c39e1f00-39be-11e9-848f-d327f0ef5f53.png) ![](https://user-images.githubusercontent.com/2933430/53439196-c39e1f00-39be-11e9-875e-6f4aea52f099.png) ![](https://user-images.githubusercontent.com/2933430/53439197-c39e1f00-39be-11e9-8d17-d303692e5dd2.png) | ![](https://user-images.githubusercontent.com/2933430/53439194-c39e1f00-39be-11e9-8302-dcea6dae726a.png) ![](https://user-images.githubusercontent.com/2933430/53439195-c39e1f00-39be-11e9-9d10-488311266460.png) ![](https://user-images.githubusercontent.com/2933430/53439198-c39e1f00-39be-11e9-8bb8-d12687113a2e.png) |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### [Tyler McGinnis](https://twitter.com/tylermcginnis)
