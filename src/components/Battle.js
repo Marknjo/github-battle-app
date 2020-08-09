@@ -6,8 +6,7 @@ import {
 	FaTimesCircle,
 } from "react-icons/fa";
 import PropTypes from "prop-types";
-import Results from "./Results";
-import ThemeContext, { ThemeConsumer } from "../contexts/theme";
+import ThemeContext from "../contexts/theme";
 import { Link } from "react-router-dom";
 
 /**
