@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
 	FaUserFriends,
 	FaFighterJet,
@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import PropTypes from "prop-types";
 import Results from "./Results";
-import { ThemeConsumer } from "../contexts/theme";
+import ThemeContext, { ThemeConsumer } from "../contexts/theme";
 import { Link } from "react-router-dom";
 
 function Instructions() {
@@ -100,32 +100,34 @@ PlayerInput.propTypes = {
 	label: PropTypes.string.isRequired,
 };
 
-function PlayerPreview({ username, onReset, label }) {
+/**
+ * Prayer Preview before battling
+ * @param {Object} param - Expects user, rest and label
+ */
+
+const PlayerPreview = ({ username, onReset, label }) => {
+	const { theme } = useContext(ThemeContext);
 	return (
-		<ThemeConsumer>
-			{({ theme }) => (
-				<div className="column player">
-					<h3 className="player-label">{label}</h3>
-					<div className={`row bg-${theme}`}>
-						<div className="player-info">
-							<img
-								className="avatar-small"
-								src={`https://github.com/${username}.png?size=200`}
-								alt={`Avatar for ${username}`}
-							/>
-							<a href={`https://github.com/${username}`} className="link">
-								{username}
-							</a>
-						</div>
-						<button className="btn-clear flex-center" onClick={onReset}>
-							<FaTimesCircle color="rgb(194, 57, 42)" size={26} />
-						</button>
-					</div>
+		<div className="column player">
+			<h3 className="player-label">{label}</h3>
+			<div className={`row bg-${theme}`}>
+				<div className="player-info">
+					<img
+						className="avatar-small"
+						src={`https://github.com/${username}.png?size=200`}
+						alt={`Avatar for ${username}`}
+					/>
+					<a href={`https://github.com/${username}`} className="link">
+						{username}
+					</a>
 				</div>
-			)}
-		</ThemeConsumer>
+				<button className="btn-clear flex-center" onClick={onReset}>
+					<FaTimesCircle color="rgb(194, 57, 42)" size={26} />
+				</button>
+			</div>
+		</div>
 	);
-}
+};
 
 PlayerPreview.propTypes = {
 	username: PropTypes.string.isRequired,
