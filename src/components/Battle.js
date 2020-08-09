@@ -48,52 +48,49 @@ function Instructions() {
 	);
 }
 
-class PlayerInput extends React.Component {
-	state = {
-		username: "",
-	};
-	handleSubmit = (event) => {
-		event.preventDefault();
+/**
+ * Controls player inputs
+ * @param {Object} param0 Props providing label and onSubmit Handler
+ */
+const PlayerInput = ({ label, onSubmit }) => {
+	const { theme } = useContext(ThemeContext);
+	const [username, setUsername] = useState("");
 
-		this.props.onSubmit(this.state.username);
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		onSubmit(username);
 	};
-	handleChange = (event) => {
-		this.setState({
-			username: event.target.value,
-		});
+
+	const handleChange = (event) => {
+		setUsername(event.target.value);
 	};
-	render() {
-		return (
-			<ThemeConsumer>
-				{({ theme }) => (
-					<form className="column player" onSubmit={this.handleSubmit}>
-						<label htmlFor="username" className="player-label">
-							{this.props.label}
-						</label>
-						<div className="row player-inputs">
-							<input
-								type="text"
-								id="username"
-								className={`input-${theme}`}
-								placeholder="github username"
-								autoComplete="off"
-								value={this.state.username}
-								onChange={this.handleChange}
-							/>
-							<button
-								className={`btn ${theme === "dark" ? "light-btn" : "dark-btn"}`}
-								type="submit"
-								disabled={!this.state.username}
-							>
-								Submit
-							</button>
-						</div>
-					</form>
-				)}
-			</ThemeConsumer>
-		);
-	}
-}
+
+	return (
+		<form className="column player" onSubmit={handleSubmit}>
+			<label htmlFor="username" className="player-label">
+				{label}
+			</label>
+			<div className="row player-inputs">
+				<input
+					type="text"
+					id="username"
+					className={`input-${theme}`}
+					placeholder="github username"
+					autoComplete="off"
+					value={username}
+					onChange={handleChange}
+				/>
+				<button
+					className={`btn ${theme === "dark" ? "light-btn" : "dark-btn"}`}
+					type="submit"
+					disabled={!username}
+				>
+					Submit
+				</button>
+			</div>
+		</form>
+	);
+};
 
 PlayerInput.propTypes = {
 	onSubmit: PropTypes.func.isRequired,
