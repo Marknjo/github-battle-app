@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 const useHover = () => {
-	const [hovering, useHovering] = useState(false);
+	const [hovering, setHovering] = useState(false);
 
-	const mouseOver = () => useHovering(true);
-	const mouseOut = () => useHovering(false);
+	const mouseOver = () => setHovering(true);
+	const mouseOut = () => setHovering(false);
 
 	return [
 		hovering,
