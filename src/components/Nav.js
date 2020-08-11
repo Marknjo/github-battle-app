@@ -1,16 +1,16 @@
-import React from 'react'
-import { ThemeConsumer } from '../contexts/theme'
+import React, { useContext } from 'react'
+import ThemeContext, { ThemeConsumer } from '../contexts/theme'
 import { NavLink } from 'react-router-dom'
 
 const activeStyle = {
   color: 'rgb(187, 46, 31)'
 }
 
-export default function Nav () {
-  return (
-    <ThemeConsumer>
-      {({ theme, toggleTheme }) => (
-        <nav className='row space-between'>
+export default function Nav ({toggleTheme}) {
+  const {theme} = useContext(ThemeContext)
+  
+
+  return (<nav className='row space-between'>
           <ul className='row nav'>
             <li>
               <NavLink
@@ -38,7 +38,5 @@ export default function Nav () {
             {theme === 'light' ? '🔦' : '💡'}
           </button>
         </nav>
-      )}
-    </ThemeConsumer>
-  )
+        )
 }
