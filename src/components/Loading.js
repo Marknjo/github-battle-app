@@ -12,6 +12,10 @@ const styles = {
 	},
 };
 
+/**
+ * Creates the loading animation
+ * @param {Object} param0
+ */
 const Loading = ({ text = "Loading", speed = 300 }) => {
 	const [content, setContent] = useState(text);
 
@@ -29,8 +33,8 @@ const Loading = ({ text = "Loading", speed = 300 }) => {
 };
 
 Loading.propTypes = {
-	text: PropTypes.string.isRequired,
-	speed: PropTypes.number.isRequired,
+	text: PropTypes.string,
+	speed: PropTypes.number,
 };
 
 export default Loading;
