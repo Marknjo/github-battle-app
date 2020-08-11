@@ -12,9 +12,8 @@ const Results = React.lazy(() => import("./components/Results"));
 const App = () => {
 	const [theme, setTheme] = useState("light");
 
-	const toggleTheme = () => {
+	const toggleTheme = () =>
 		setTheme((theme) => (theme === "light" ? "dark" : "light"));
-	};
 
 	return (
 		<Router>
